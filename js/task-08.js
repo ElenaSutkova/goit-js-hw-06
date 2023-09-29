@@ -23,19 +23,26 @@
 
 const inputField = document.querySelector('.login-form');
 
-inputField.addEventListener('submit', warning);
+inputField.addEventListener('submit', fooSubmit);
 
-function warning(event) {
+
+function fooSubmit(event) {
+    event.preventDefault();
     const emailLink = event.currentTarget.elements.email;
     const passwordLink = event.currentTarget.elements.password;
 
-    if (emailLink.value === '' || passwordLink === '') {
+    if (emailLink.value === '' || passwordLink.value === '') {
         alert('Всі поля повинні бути заповнені!')
     } else {
-        const correctValue = {
+        const loginForm = {
             [emailLink.name]: emailLink.value,
             [passwordLink.name]: passwordLink.value
         };
+        console.log(loginForm)
     }
-    console.log(correctValue)
 }
+
+  
+  
+  
+  
