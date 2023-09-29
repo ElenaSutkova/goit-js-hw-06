@@ -37,4 +37,5 @@ function warning(event) {
             [passwordLink.name]: passwordLink.value
         };
     }
+    console.log(correctValue)
 }
